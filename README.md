@@ -4,6 +4,7 @@ This example should show how to create a screen that renders dynamic attributes 
 
 ## Variant 1: KevValueEntity editor
 
+[Sources Variant 1](https://github.com/mariodavid/cuba-example-dynamic-params-screen/tree/master/modules/web/src/com/rtcab/cedps/web/screens/variant1)
 In the first variant a KV entity editor is used. It will be passed into the dynamic params screen:
 
 ```
@@ -47,6 +48,9 @@ Caused by: com.haulmont.cuba.core.global.EntityAccessException: Unable to load e
 
 
 ## Variant 2: AbstractWindow with KV entity as a screen param
+
+
+[Sources Variant 2](https://github.com/mariodavid/cuba-example-dynamic-params-screen/tree/master/modules/web/src/com/rtcab/cedps/web/screens/variant2)
 
 The screen can be opened there, but the problem is that the reference is not updated:
 
@@ -129,6 +133,9 @@ Expected behavior:
 
 
 ## Variant 3: Callback via Consumer<...> from opening screen
+
+
+[Sources Variant 3](https://github.com/mariodavid/cuba-example-dynamic-params-screen/tree/master/modules/web/src/com/rtcab/cedps/web/screens/variant3)
 
 ```
 
