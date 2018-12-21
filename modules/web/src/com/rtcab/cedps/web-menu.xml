@@ -2,6 +2,6 @@
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
     <menu id="application-cedps"
           insertBefore="administration">
-        <item screen="opening-screen"/>
+        <item screen="variant1-opening-screen"/>
     </menu>
 </menu-config>

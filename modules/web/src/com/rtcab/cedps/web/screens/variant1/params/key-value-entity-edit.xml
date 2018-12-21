@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://editorCaption"
-        class="com.rtcab.cedps.web.screens.params.KeyValueEntityEdit"
+        class="com.rtcab.cedps.web.screens.variant1.params.KeyValueEntityEdit"
         datasource="keyValueEntityDs"
         focusComponent="fieldGroup"
-        messagesPack="com.rtcab.cedps.web.screens.params">
+        messagesPack="com.rtcab.cedps.web.screens.variant1.params">
     <dsContext>
         <datasource id="keyValueEntityDs"
                     class="com.haulmont.cuba.core.entity.KeyValueEntity"

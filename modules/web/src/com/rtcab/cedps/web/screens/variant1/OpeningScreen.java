@@ -1,4 +1,4 @@
-package com.rtcab.cedps.web.screens;
+package com.rtcab.cedps.web.screens.variant1;
 
 import com.haulmont.bali.util.ParamsMap;
 import com.haulmont.cuba.core.entity.KeyValueEntity;
@@ -19,7 +19,7 @@ public class OpeningScreen extends AbstractWindow {
 
     KeyValueEntity keyValueEntity = createKeyValueEntity();
 
-    AbstractEditor editor = openEditor("dynamic-params-screen", keyValueEntity, OpenType.DIALOG,
+    AbstractEditor editor = openEditor("variant1-dynamic-params-screen", keyValueEntity, OpenType.DIALOG,
         ParamsMap.of("key", "value"));
 
     editor.addCloseWithCommitListener(() -> showNotification("Foo: ", keyValueEntity.getValue("foo")));
