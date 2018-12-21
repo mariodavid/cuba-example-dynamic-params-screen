@@ -9,7 +9,7 @@ import com.haulmont.cuba.gui.components.AbstractWindow;
 import java.util.UUID;
 import javax.inject.Inject;
 
-public class OpeningScreen extends AbstractWindow {
+public class Variant1OpeningScreen extends AbstractWindow {
 
 
   @Inject
@@ -22,7 +22,7 @@ public class OpeningScreen extends AbstractWindow {
     AbstractEditor editor = openEditor("variant1-dynamic-params-screen", keyValueEntity, OpenType.DIALOG,
         ParamsMap.of("key", "value"));
 
-    editor.addCloseWithCommitListener(() -> showNotification("Foo: ", keyValueEntity.getValue("foo")));
+    editor.addCloseWithCommitListener(() -> showNotification("Foo: " + keyValueEntity.getValue("foo")));
   }
 
   private KeyValueEntity createKeyValueEntity() {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://caption"
-        class="com.rtcab.cedps.web.screens.variant1.OpeningScreen"
+        class="com.rtcab.cedps.web.screens.variant1.Variant1OpeningScreen"
         messagesPack="com.rtcab.cedps.web.screens.variant1">
     <dialogMode height="600"
                 width="800"/>
