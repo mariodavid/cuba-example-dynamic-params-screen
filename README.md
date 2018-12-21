@@ -127,3 +127,20 @@ Expected behavior:
 2. "Foo: Hello"
 
 
+
+## Variant 3: Callback via Consumer<...> from opening screen
+
+```
+
+    Variant3DynamicParamsScreen paramsScreen = (Variant3DynamicParamsScreen) openWindow(
+        "variant3-dynamic-params-screen",
+        OpenType.DIALOG);
+
+    paramsScreen.setParamValuesHandler(paramValues -> showNotification(
+        "Foo: " + paramValues.get("foo")));
+
+
+```
+
+
+this works!

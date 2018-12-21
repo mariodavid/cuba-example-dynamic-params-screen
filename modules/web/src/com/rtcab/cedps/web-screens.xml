@@ -11,4 +11,9 @@
             template="com/rtcab/cedps/web/screens/variant2/variant2-opening-screen.xml"/>
     <screen id="variant2-dynamic-params-screen"
             template="/com/rtcab/cedps/web/screens/variant2/params/variant2-dynamic-params-screen.xml"/>
+
+    <screen id="variant3-opening-screen"
+            template="com/rtcab/cedps/web/screens/variant3/variant3-opening-screen.xml"/>
+    <screen id="variant3-dynamic-params-screen"
+            template="/com/rtcab/cedps/web/screens/variant3/params/variant3-dynamic-params-screen.xml"/>
 </screen-config>

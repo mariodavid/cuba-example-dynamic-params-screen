@@ -4,5 +4,6 @@
           insertBefore="administration">
         <item screen="variant1-opening-screen"/>
         <item screen="variant2-opening-screen"/>
+        <item screen="variant3-opening-screen"/>
     </menu>
 </menu-config>
