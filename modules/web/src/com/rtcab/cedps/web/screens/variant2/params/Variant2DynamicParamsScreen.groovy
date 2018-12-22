@@ -38,16 +38,15 @@ class Variant2DynamicParamsScreen extends AbstractWindow {
     datasource.addItem(keyValueEntity)
     datasource.setItem(keyValueEntity)
 
-
-    fieldGroup.setDatasource(datasource)
-
-
     fieldGroup.setSizeFull()
 
     FieldConfig fieldConfig = fieldGroup.createField("foo")
-    fieldConfig.component = componentsFactory.createComponent(TextInputField.class)
+    fieldConfig.setProperty("foo")
     fieldConfig.caption = "Foo"
     fieldGroup.addField(fieldConfig)
+
+    fieldGroup.setDatasource(datasource)
+    fieldGroup.bind()
   }
 
   protected ValueCollectionDatasourceImpl createDynamicParamsDatasource() {
