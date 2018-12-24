@@ -1,7 +1,8 @@
 
 buildscript {
-    ext.cubaVersion = '6.10.4'
-    repositories {
+    ext.cubaVersion = '7.0-SNAPSHOT'
+    repositories { 
+        mavenLocal()
         
         maven {
             url 'https://repo.cuba-platform.com/content/groups/work'
@@ -26,7 +27,6 @@ def webModule = project(":${modulePrefix}-web")
 def servletApi = 'javax.servlet:javax.servlet-api:3.1.0'
 
 
-apply(plugin: 'idea')
 apply(plugin: 'cuba')
 
 cuba {
@@ -53,7 +53,6 @@ def hsql = 'org.hsqldb:hsqldb:2.2.9'
 configure([globalModule, coreModule, webModule]) {
     apply(plugin: 'java')
     apply(plugin: 'maven')
-    apply(plugin: 'idea')
     apply(plugin: 'cuba')
 
     dependencies {
@@ -102,7 +101,7 @@ configure(coreModule) {
 
     dependencies {
         compile(globalModule)
-        provided(servletApi)
+        compileOnly(servletApi)
         jdbc(hsql)
         testRuntime(hsql)
 
@@ -147,7 +146,7 @@ configure(webModule) {
     }
 
     dependencies {
-        provided(servletApi)
+        compileOnly(servletApi)
         compile(globalModule)
 
     }
@@ -211,6 +210,3 @@ task restart(dependsOn: ['stop', ":${modulePrefix}-core:deploy", ":${modulePrefi
     }
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.3.1'
-}

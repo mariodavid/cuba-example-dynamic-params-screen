@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         caption="msg://editorCaption"
-        class="com.rtcab.cedps.web.screens.variant1.params.Variant1DynamicParamsScreen"
-        datasource="keyValueEntityDs"
         focusComponent="fieldGroup"
         messagesPack="com.rtcab.cedps.web.screens.variant1.params">
-    <dsContext>
-        <datasource id="keyValueEntityDs"
-                    class="com.haulmont.cuba.core.entity.KeyValueEntity"
-                    view="_local"/>
-    </dsContext>
+    <data>
+        <instance id="keyValueEntityDc"
+                  class="com.haulmont.cuba.core.entity.KeyValueEntity"
+                  view="_local"/>
+    </data>
     <dialogMode forceDialog="true"
                 height="AUTO"
                 width="600"/>
-    <layout expand="windowActions"
+    <layout expand="editActions"
             spacing="true">
-        <fieldGroup id="fieldGroup"
-                    datasource="keyValueEntityDs">
-        </fieldGroup>
-        <frame id="windowActions"
-               screen="editWindowActions"/>
+        <form id="fieldGroup"
+              dataContainer="keyValueEntityDc"/>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
     </layout>
 </window>
