@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         caption="msg://editorCaption"
-        class="com.rtcab.cedps.web.screens.variant2.params.Variant2DynamicParamsScreen"
         messagesPack="com.rtcab.cedps.web.screens.variant2.params">
+    <data>
+        <keyValueInstance id="container">
+        </keyValueInstance>
+    </data>
     <dialogMode forceDialog="true"
                 height="600"
                 width="800"/>
-    <layout
+    <layout expand="editActions"
             spacing="true">
-
-        <fieldGroup id="fieldGroup">
-        </fieldGroup>
-
-        <buttonsPanel id="buttons">
-            <button caption="mainMsg://actions.Ok" invoke="saveParams"/>
-        </buttonsPanel>
-
+        <form id="form"/>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
     </layout>
 </window>
