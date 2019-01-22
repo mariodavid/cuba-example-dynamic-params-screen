@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         caption="msg://caption"
-        class="com.rtcab.cedps.web.screens.variant2.Variant2OpeningScreen"
         messagesPack="com.rtcab.cedps.web.screens.variant2">
     <dialogMode height="600"
                 width="800"/>
     <layout>
-        <button caption="msg://openParamsScreen" invoke="openParamsScreen"/>
+        <button id="openBtn" caption="msg://openParamsScreen"/>
     </layout>
 </window>

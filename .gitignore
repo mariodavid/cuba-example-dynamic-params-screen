@@ -1,3 +1,4 @@
+.idea
 .gradle
 .studio
 *.ipr
@@ -8,3 +9,4 @@ deploy/*
 modules/*/build/*
 out
 test-run
+.idea

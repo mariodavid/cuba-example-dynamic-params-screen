@@ -18,50 +18,50 @@ import javax.inject.Inject
 
 class Variant2DynamicParamsScreen extends AbstractWindow {
 
-  @Inject
-  ComponentsFactory componentsFactory
+    @Inject
+    ComponentsFactory componentsFactory
 
-  @WindowParam
-  KeyValueEntity keyValueEntity
+    @WindowParam
+    KeyValueEntity keyValueEntity
 
-  @Inject
-  FieldGroup fieldGroup
+    @Inject
+    FieldGroup fieldGroup
 
-  @Override
-  void init(Map<String, Object> params) {
-    super.init(params)
+    @Override
+    void init(Map<String, Object> params) {
+        super.init(params)
 
-    ValueCollectionDatasourceImpl datasource = createDynamicParamsDatasource()
+        ValueCollectionDatasourceImpl datasource = createDynamicParamsDatasource()
 
-    datasource.addProperty("foo", String)
+        datasource.addProperty("foo", String)
 
-    datasource.addItem(keyValueEntity)
-    datasource.setItem(keyValueEntity)
+        datasource.addItem(keyValueEntity)
+        datasource.setItem(keyValueEntity)
 
-    fieldGroup.setSizeFull()
+        fieldGroup.setSizeFull()
 
-    FieldConfig fieldConfig = fieldGroup.createField("foo")
-    fieldConfig.setProperty("foo")
-    fieldConfig.caption = "Foo"
-    fieldGroup.addField(fieldConfig)
+        FieldConfig fieldConfig = fieldGroup.createField("foo")
+        fieldConfig.setProperty("foo")
+        fieldConfig.caption = "Foo"
+        fieldGroup.addField(fieldConfig)
 
-    fieldGroup.setDatasource(datasource)
-    fieldGroup.bind()
-  }
+        fieldGroup.setDatasource(datasource)
+        fieldGroup.bind()
+    }
 
-  protected ValueCollectionDatasourceImpl createDynamicParamsDatasource() {
-    new DsBuilder(getDsContext())
-        .setJavaClass(KeyValueEntity.class)
-        .setId("paramsDs")
-        .buildValuesCollectionDatasource()
-  }
+    protected ValueCollectionDatasourceImpl createDynamicParamsDatasource() {
+        new DsBuilder(getDsContext())
+            .setJavaClass(KeyValueEntity.class)
+            .setId("paramsDs")
+            .buildValuesCollectionDatasource()
+    }
 
-  void saveParams() {
+    void saveParams() {
 
-    def datasource = getDsContext().get('paramsDs')
+        def datasource = getDsContext().get('paramsDs')
 
-    showNotification("Foo before close: " + datasource.getItem().getValue('foo'))
+        showNotification("Foo before close: " + datasource.getItem().getValue('foo'))
 
-    close(Editor.COMMIT_ACTION_ID, true)
-  }
+        close(Editor.COMMIT_ACTION_ID, true)
+    }
 }
